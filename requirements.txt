@@ -1,0 +1,8 @@
+tensorflow
+keras
+PyQt5
+groq
+python-dotenv
+opencv-python
+numpy
+reportlab

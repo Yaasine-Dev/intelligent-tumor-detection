@@ -1,0 +1,4 @@
+/* Add your PyQt5 styles here */
+QMainWindow {
+    background-color: #f0f0f0;
+}
