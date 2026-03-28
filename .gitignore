@@ -1,0 +1,25 @@
+#Secrets
+.env
+#Python cache
+__pycache__/
+*.pyc
+*pyo
+
+#Data
+data/glioma/
+data/meningioma/
+data/notumor/
+data/pituitary/
+#jupyter
+.ipynb_checkpoints/
+#Virtual env
+.venv/
+venv/
+#IDE
+.vscode/
+.idea/
+#OS
+.DS_Store
+Thumbs.db
+#Test files
+test_groq.py
