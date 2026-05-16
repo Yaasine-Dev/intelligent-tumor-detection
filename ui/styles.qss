@@ -1,0 +1,359 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   INTELLIGENT BRAIN TUMOR DETECTION — Medical Qt StyleSheet
+   Palette : #1B4F8A (bleu foncé) · #2E75B6 (bleu médical) · #D6E8F7 (bleu clair)
+             #FFFFFF (blanc)      · #F5F5F5 (gris clair)   · #3A3A3A (texte)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+
+/* ── 1. Fenêtre & fond global ───────────────────────────────────────────────── */
+
+QMainWindow,
+QWidget#root {
+    background-color: #F0F4F8;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 11px;
+    color: #3A3A3A;
+}
+
+QWidget {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 11px;
+    color: #3A3A3A;
+}
+
+
+/* ── 2. Panneaux principaux ─────────────────────────────────────────────────── */
+
+QWidget#leftPanel,
+QWidget#centerPanel,
+QWidget#rightPanel {
+    background-color: #FFFFFF;
+    border: 1px solid #C5D8EE;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+/* ── 3. Titres de panneaux ──────────────────────────────────────────────────── */
+
+QLabel#panelTitle {
+    background-color: #1B4F8A;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 7px 14px;
+    letter-spacing: 0.4px;
+}
+
+
+/* ── 4. Zone de dépôt (drag & drop) ────────────────────────────────────────── */
+
+QLabel#dropZone {
+    background-color: #F5F9FF;
+    border: 2px dashed #2E75B6;
+    border-radius: 7px;
+    color: #2E75B6;
+    font-size: 11px;
+    padding: 14px;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#dropZone:hover {
+    background-color: #D6E8F7;
+    border-color: #1B4F8A;
+    color: #1B4F8A;
+}
+
+
+/* ── 5. Label nom de fichier ────────────────────────────────────────────────── */
+
+QLabel#fileLabel {
+    color: #5A6A7A;
+    font-size: 10px;
+    font-style: italic;
+    qproperty-alignment: AlignCenter;
+}
+
+
+/* ── 6. Labels d'affichage image ────────────────────────────────────────────── */
+
+QLabel#imageLabel {
+    background-color: #F5F5F5;
+    border: 1px solid #C5D8EE;
+    border-radius: 6px;
+    color: #9AAFC4;
+    font-size: 11px;
+    qproperty-alignment: AlignCenter;
+}
+
+
+/* ── 7. Boutons ─────────────────────────────────────────────────────────────── */
+
+/* Bouton principal — Charger IRM */
+QPushButton#btnPrimary {
+    background-color: #2E75B6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 16px;
+    font-size: 11px;
+    font-weight: bold;
+    min-height: 32px;
+}
+QPushButton#btnPrimary:hover   { background-color: #1B4F8A; }
+QPushButton#btnPrimary:pressed { background-color: #143A66; }
+
+/* Bouton Analyser */
+QPushButton#btnAnalyze {
+    background-color: #1A7A4A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 36px;
+}
+QPushButton#btnAnalyze:hover   { background-color: #145C38; }
+QPushButton#btnAnalyze:pressed { background-color: #0E4028; }
+QPushButton#btnAnalyze:disabled {
+    background-color: #B8CDD8;
+    color: #FFFFFF;
+}
+
+/* Bouton Exporter PDF */
+QPushButton#btnPdf {
+    background-color: #C0392B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 16px;
+    font-size: 11px;
+    font-weight: bold;
+    min-height: 32px;
+}
+QPushButton#btnPdf:hover   { background-color: #962D22; }
+QPushButton#btnPdf:pressed { background-color: #6E2119; }
+QPushButton#btnPdf:disabled {
+    background-color: #D8B0AD;
+    color: #FFFFFF;
+}
+
+/* Boutons génériques (QMessageBox, QFileDialog…) */
+QPushButton {
+    background-color: #2E75B6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 14px;
+    font-size: 11px;
+    min-height: 28px;
+}
+QPushButton:hover   { background-color: #1B4F8A; }
+QPushButton:pressed { background-color: #143A66; }
+QPushButton:disabled {
+    background-color: #C5D8EE;
+    color: #8AAAC8;
+}
+
+
+/* ── 8. GroupBox ────────────────────────────────────────────────────────────── */
+
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #2E75B6;
+    border-radius: 7px;
+    margin-top: 12px;
+    padding-top: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #1B4F8A;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 2px 8px;
+    background-color: #D6E8F7;
+    border: 1px solid #2E75B6;
+    border-radius: 4px;
+    color: #1B4F8A;
+    font-weight: bold;
+}
+
+QGroupBox#resultBox {
+    background-color: #F5F9FF;
+    border-color: #2E75B6;
+}
+
+QGroupBox#reportBox {
+    background-color: #FAFCFF;
+    border-color: #2E75B6;
+}
+
+
+/* ── 9. Labels résultat prédiction ──────────────────────────────────────────── */
+
+QLabel#predClass {
+    background-color: #FFFFFF;
+    border: 1px solid #C5D8EE;
+    border-radius: 5px;
+    color: #1B4F8A;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#predConfidence {
+    background-color: #F5F5F5;
+    border: 1px solid #C5D8EE;
+    border-radius: 5px;
+    color: #2E75B6;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px;
+    qproperty-alignment: AlignCenter;
+}
+
+
+/* ── 10. Zone rapport médical ───────────────────────────────────────────────── */
+
+QTextEdit#reportText {
+    background-color: #FFFFFF;
+    border: 1px solid #C5D8EE;
+    border-radius: 5px;
+    color: #2C2C2C;
+    font-size: 11px;
+    line-height: 1.6;
+    padding: 8px;
+    selection-background-color: #D6E8F7;
+    selection-color: #1B4F8A;
+}
+
+
+/* ── 11. Scrollbars ─────────────────────────────────────────────────────────── */
+
+QScrollBar:vertical {
+    background-color: #F5F5F5;
+    width: 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background-color: #2E75B6;
+    border-radius: 4px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #1B4F8A;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+    background: none;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: #F5F5F5;
+    height: 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background-color: #2E75B6;
+    border-radius: 4px;
+    min-width: 24px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: #1B4F8A;
+}
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+    background: none;
+}
+
+
+/* ── 12. Barre de progression ───────────────────────────────────────────────── */
+
+QProgressBar#progressBar {
+    background-color: #E8EFF6;
+    border: 1px solid #C5D8EE;
+    border-radius: 4px;
+    height: 7px;
+    text-align: center;
+    font-size: 0px;   /* masque le texte "0%" */
+}
+QProgressBar#progressBar::chunk {
+    background-color: #2E75B6;
+    border-radius: 4px;
+}
+
+
+/* ── 13. Barre de statut ────────────────────────────────────────────────────── */
+
+QStatusBar {
+    background-color: #F5F5F5;
+    border-top: 1px solid #C5D8EE;
+    color: #5A6A7A;
+    font-size: 10px;
+    padding: 2px 8px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+
+/* ── 14. Boîtes de dialogue ─────────────────────────────────────────────────── */
+
+QMessageBox {
+    background-color: #FFFFFF;
+    font-size: 11px;
+}
+
+QMessageBox QLabel {
+    color: #3A3A3A;
+    font-size: 11px;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    padding: 6px 16px;
+}
+
+QFileDialog {
+    background-color: #FFFFFF;
+}
+
+QFileDialog QLabel {
+    color: #3A3A3A;
+}
+
+
+/* ── 15. Tooltips ───────────────────────────────────────────────────────────── */
+
+QToolTip {
+    background-color: #1B4F8A;
+    color: #FFFFFF;
+    border: 1px solid #2E75B6;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 10px;
+}
+
+
+/* ── 16. Labels génériques ──────────────────────────────────────────────────── */
+
+QLabel {
+    color: #3A3A3A;
+    font-size: 11px;
+    background-color: transparent;
+}

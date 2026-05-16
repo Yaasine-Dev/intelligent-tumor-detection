@@ -1,0 +1,8 @@
+tensorflow==2.16.1
+PyQt5==5.15.11
+reportlab==4.5.0
+groq==1.1.2
+python-dotenv==1.0.0
+opencv-contrib-python==4.9.0.80
+numpy
+Pillow==12.2.0
